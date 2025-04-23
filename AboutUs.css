@@ -62,6 +62,17 @@ body {
     gap: 0 2em;
   }
 
+  @media only screen and (max-width: 660px) {
+    .about_heading {
+      grid-template-columns: 1fr;
+    }
+  
+    .about .para {
+      grid-column: 1;
+      text-align: center;
+      margin-top: 1em;
+    }
+
 .about_heading {
   display: grid;
   grid-template-columns: 1fr 1fr;
