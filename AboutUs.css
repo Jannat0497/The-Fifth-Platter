@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  color: #fff;
-  font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s linear;
+    color: #fff;
+    text-transform: capitalize;
 }
 
 body {
