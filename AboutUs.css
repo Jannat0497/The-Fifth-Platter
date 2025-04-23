@@ -36,6 +36,11 @@ body {
   margin-bottom: 2em;
 }
 
+.para1 {
+  color: #888;
+  padding-bottom: 5%;
+}
+
 .about_heading {
   display: grid;
   grid-template-columns: 1fr 1fr;
