@@ -79,6 +79,9 @@ header::before {
   font-size: 16px;
   transition: color 0.3s ease;
 }
+.nav_items a:hover {
+  color: orangered;
+}
 
 .btn {
   background: orangered;
