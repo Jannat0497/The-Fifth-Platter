@@ -82,14 +82,19 @@ header::before {
 .nav_items a:hover {
   color: orangered;
 }
-
 .btn {
   background: orangered;
   border: 2px solid orangered;
   padding: 8px 14px;
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
+
+.btn:hover {
+  background: transparent;
+}
+
 
 .main {
   position: absolute;
