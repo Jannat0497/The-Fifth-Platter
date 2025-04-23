@@ -1,53 +1,70 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-  }
-  
-  body {
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 16px;
-  }
-  
-  .cart-container {
-    background-color: #1d1d1d;
-    padding: 40px 30px;
-    border-radius: 16px;
-    width: 400px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cart-container h1 {
-    color: #ff6f00;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 30px;
-    white-space: nowrap;
-  }
-  
-  .cart-items p {
-    color: #ccc;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
-  .menu-btn {
-    background-color: #ff6f00;
-    color: #1d1d1d;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    display: inline-block;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background: #222;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 16px;
+}
+
+.cart-container {
+  background: #1d1d1d;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 111, 0, 0.4);
+}
+
+.cart-container h1 {
+  color: #ff6f00;
+  font: 600 2.5rem 'Raleway', sans-serif;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  text-shadow: 1px 1px 5px rgba(255, 111, 0, 0.4);
+}
+
+.cart-items p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.menu-btn {
+  background: #ff6f00;
+  color: #1d1d1d;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-btn:hover {
+  background: #e65c00;
+  transform: translateY(-2px);
+}
+
+.menu-btn:active {
+  transform: translateY(1px);
+}
