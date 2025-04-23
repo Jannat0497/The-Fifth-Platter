@@ -52,6 +52,11 @@ body {
   color: white;
 }
 
+.btn1:hover {
+  background: transparent;
+  color: #000;
+}
+
 .about_heading {
   display: grid;
   grid-template-columns: 1fr 1fr;
