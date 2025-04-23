@@ -101,7 +101,9 @@ header::before {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: left;
   width: 80%;
+  transition: all 0.3s ease;
 }
 
 .heading_1 {
