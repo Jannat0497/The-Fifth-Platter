@@ -24,7 +24,7 @@
   }
   
   .login-container {
-    background-color: #1d1d1d;
+    background-color: #070606;
     padding: 40px 30px;
     border-radius: 12px;
     width: 350px;
@@ -55,7 +55,7 @@
   button {
     width: 100%;
     padding: 14px;
-    background-color: #ff6f00; /* Orange */
+    background-color: #ec8a40; /* Orange */
     color: #fff;
     font-weight: bold;
     border: none;
@@ -72,5 +72,5 @@
   
   .footer-text a {
     color: #ff6f00; /* Orange */
-    text-decoration: none;
+    
   }
