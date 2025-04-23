@@ -40,8 +40,10 @@ header::before {
 }
 
 .logo img {
-  width: 180px;
+  width: 160px;
+  height: auto;
 }
+
 
 .nav_items {
   display: flex;
