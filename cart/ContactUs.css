@@ -56,6 +56,13 @@ body {
   max-width: 400px;
 }
 
+@media only screen and (max-width: 850px) {
+  .contact_box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   .right_box {
     text-align: center;
   }
+}
