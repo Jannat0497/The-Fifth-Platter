@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Your Order - The Fifth Platter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://cdn.icons.com/icons2/3590/PNG/512/burgers_cafe_food_restaurant_icon_226128.png" />
+  <style>
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('img/bg.jpg') center/cover no-repeat;
+      filter: blur(4px) brightness(0.4);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background: transparent;
+      color: orangered;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 180px);
+      padding: 2rem;
+    }
+
+    .track-form {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 0 20px rgba(255, 69, 0, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .track-form h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .form-control {
+      background-color: #1f1f1f;
+      border: 1px solid #555;
+      color: #fff;
+      transition: 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: orangered;
+      box-shadow: 0 0 10px orangered;
+    }
+
+    .btn {
+      background-color: orangered;
+      border: none;
+      font-weight: bold;
+      padding: 10px;
+      margin-top: 0.5rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #cc3700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      background: transparent;
+      color: #ccc;
+    }
+
+    @media (max-width: 576px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .track-form h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Fifth Platter</h1>
+    <p>Track your delicious platter order below</p>
+  </header>
+
+  <main>
+    <form id="track-form" class="track-form">
+      <h2>Enter Your Order ID</h2>
+      <input type="text" id="order-id" class="form-control mb-3" placeholder="Order ID" required />
+      <button type="submit" class="btn btn-block">Track Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Fifth Platter. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('track-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const id = document.getElementById('order-id').value.trim();
+      if (id) {
+        window.location.href = 'tracking.html?orderId=' + encodeURIComponent(id);
+      }
+    });
+  </script>
+
+</body>
+</html>
