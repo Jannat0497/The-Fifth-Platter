@@ -4,10 +4,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-}
-
-body.dark-theme {
-    background: #000;
+   }
+  
+   body.dark-theme {
+    background: url(https://img.freepik.com/premium-photo/plate-food-table-with-blurred-background_1304147-157373.jpg);
+    background-size: cover;
+    /* Slightly increased the overlay opacity to darken the image more */
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
     color: #ddd;
     display: flex;
     justify-content: center;
@@ -16,116 +20,119 @@ body.dark-theme {
     flex-direction: column;
     font-size: 16px;
     padding: 20px;
-}
-
-/* Header Styling */
-header {
+   }
+  
+   /* Header Styling */
+   header {
     text-align: center;
     margin-bottom: 40px;
-}
-
-h1 {
+   }
+  
+   h1 {
     font-size: 3.5rem;
-    color: #cc5500;
+    color: #ff7f50; /* Coral for a food-related theme */
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 3px 3px 10px rgba(204, 85, 0, 0.7);
+    text-shadow: 3px 3px 10px rgba(255, 127, 80, 0.7);
     margin-bottom: 10px;
-}
-
-.tagline {
-    color: #aaa;
+   }
+  
+   .tagline {
+    color: #eee; /* Light text for tagline */
     font-style: italic;
     font-size: 1.1rem;
-}
-
-/* Signup Container */
-.signup-container {
-    background: #1a1a1a;
+   }
+  
+   /* Signup Container */
+   .signup-container {
+    /* Made the background of the container even darker */
+    background: rgba(0, 0, 0, 0.7); /* Increased opacity */
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(204, 85, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.5);
     width: 400px;
     transform: scale(0.98);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.signup-container:hover {
+   }
+  
+   .signup-container:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(204, 85, 0, 0.7);
-}
-
-/* Input Group */
-.input-group {
+    box-shadow: 0 0 25px rgba(255, 127, 80, 0.7);
+   }
+  
+   /* Input Group */
+   .input-group {
     margin-bottom: 25px;
     position: relative;
-}
-
-.input-group input {
+   }
+  
+   .input-group input {
     width: 100%;
     padding: 15px;
-    border: 2px solid #333;
-    background-color: #222;
+    border: 2px solid #555; /* Darker border */
+    /* Made the background of the input fields even darker */
+    background-color: rgba(255, 255, 255, 0.02); /* Further decreased opacity */
     border-radius: 10px;
-    color: #eee;
+    color: #eee; /* Lighter text for better contrast on darker background */
     font-size: 16px;
     outline: none;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.input-group input:focus {
-    background-color: #444;
-    border-color: #cc5500;
-    box-shadow: 0 0 8px rgba(204, 85, 0, 0.8);
-}
-
-.input-group input::placeholder {
-    color: #777;
+   }
+  
+   .input-group input:focus {
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly more opaque on focus */
+    border-color: #ff7f50;
+    box-shadow: 0 0 8px rgba(255, 127, 80, 0.8);
+   }
+  
+   .input-group input::placeholder {
+    color: #666; /* Even darker placeholder */
     transition: color 0.3s ease;
-}
-
-.input-group input:focus::placeholder {
+   }
+  
+   .input-group input:focus::placeholder {
     color: transparent;
-}
-
-.input-group label {
+   }
+  
+   .input-group label {
     position: absolute;
     top: 50%;
     left: 15px;
-    color: #777;
+    color: #666; /* Even darker label */
     font-size: 1rem;
     transform: translateY(-50%);
     transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, background-color 0.3s ease;
     pointer-events: none;
     background-color: transparent;
     padding: 0;
-}
-
-.input-group input:focus + label,
-.input-group input:not(:placeholder-shown) + label {
+   }
+  
+   .input-group input:focus + label,
+   .input-group input:not(:placeholder-shown) + label {
     top: -10px;
     left: 10px;
-    background-color: #1a1a1a;
-    color: #cc5500;
+    /* Made the background of the focused label even darker */
+    background-color: rgba(0, 0, 0, 0.7); /* Increased opacity */
+    color: #ff7f50;
     padding: 0 8px;
     font-size: 0.8rem;
     border-radius: 4px;
-}
-
-.error-message {
+   }
+  
+   .error-message {
     display: block;
     color: #ff4d4d;
     font-size: 0.8rem;
     margin-top: 5px;
-}
-
-/* Button Styling */
-.signup-button {
+   }
+  
+   /* Button Styling */
+   .signup-button {
     width: 100%;
     padding: 15px;
-    background-color: #cc5500;
-    color: #eee;
+    background-color: #ff7f50; /* Coral */
+    color: #fff; /* White text */
     font-weight: bold;
     border: none;
     border-radius: 10px;
@@ -133,82 +140,82 @@ h1 {
     font-size: 1.1rem;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.signup-button:hover {
-    background-color: #b34700;
-    box-shadow: 0 6px 12px rgba(204, 85, 0, 0.5);
+   }
+  
+   .signup-button:hover {
+    background-color: #f06030; /* Darker Coral */
+    box-shadow: 0 6px 12px rgba(255, 127, 80, 0.5);
     transform: translateY(-2px);
-}
-
-.signup-button:active {
+   }
+  
+   .signup-button:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer Text */
-.footer-text {
+   }
+  
+   /* Footer Text */
+   .footer-text {
     margin-top: 30px;
     text-align: center;
     font-size: 0.9rem;
     color: #aaa;
-}
-
-.footer-text a {
-    color: #cc5500;
+   }
+  
+   .footer-text a {
+    color: #ff7f50;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-}
-
-.footer-text a:hover {
-    color: #b34700;
+   }
+  
+   .footer-text a:hover {
+    color: #f06030;
     text-decoration: underline;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 600px) {
+   }
+  
+   /* Media Queries for Responsiveness */
+   @media (max-width: 600px) {
     body.dark-theme {
-        align-items: stretch;
-        padding: 30px 15px;
+    align-items: stretch;
+    padding: 30px 15px;
     }
-
+  
     header {
-        margin-bottom: 30px;
+    margin-bottom: 30px;
     }
-
+  
     h1 {
-        font-size: 2.8rem;
+    font-size: 2.8rem;
     }
-
+  
     .signup-container {
-        width: 100%;
-        border-radius: 10px;
-        padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
     }
-
+  
     .input-group {
-        margin-bottom: 20px;
+    margin-bottom: 20px;
     }
-
+  
     .input-group input {
-        font-size: 1rem;
-        padding: 12px;
-        border-radius: 8px;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
     }
-
+  
     .input-group label {
-        font-size: 0.9rem;
+    font-size: 0.9rem;
     }
-
+  
     .signup-button {
-        font-size: 1rem;
-        padding: 12px;
-        border-radius: 8px;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
     }
-
+  
     .footer-text {
-        font-size: 0.85rem;
-        margin-top: 20px;
+    font-size: 0.85rem;
+    margin-top: 20px;
     }
-}
+   }
