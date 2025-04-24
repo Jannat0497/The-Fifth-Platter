@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  body {
+    background: #0a0a0a;
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('img/bg.jpg') center/cover no-repeat;
+    filter: blur(4px) brightness(0.4);
+    z-index: -1;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: transparent;
+    color: orangered;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 180px);
+    padding: 2rem;
+  }
+  
+  .track-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  .track-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .form-control {
+    background-color: #1f1f1f;
+    border: 1px solid #555;
+    color: #fff;
+  }
+  
+  .form-control::placeholder {
+    color: #aaa;
+  }
+  
+  .btn {
+    background-color: orangered;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 0.5rem;
+    color: #fff;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    background: transparent;
+    color: #ccc;
+  }
+  
+  @media (max-width: 576px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .track-form h2 {
+      font-size: 1.4rem;
+    }
+  }
+  
