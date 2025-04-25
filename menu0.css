@@ -57,6 +57,9 @@
     scroll-snap-type: x mandatory;
   }
   
+  .slider {
+    scroll-behavior: smooth;
+  }
   .slider::-webkit-scrollbar {
     display: none;
   }
