@@ -76,7 +76,10 @@
     text-decoration: none;
     transition: all 0.3s ease;
   }
-  
+  .category-nav a:hover {
+    background-color: #ff6f00;
+    color: #111;
+  }
   .slider {
     display: flex;
     overflow-x: auto;
