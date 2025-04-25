@@ -58,6 +58,25 @@
     flex-shrink: 0;
     scroll-snap-align: start;
   }
+
+  .category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .category-nav a {
+    color: #ff6f00;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid #ff6f00;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
   .slider {
     display: flex;
     overflow-x: auto;
