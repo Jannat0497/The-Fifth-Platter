@@ -39,7 +39,10 @@ header h1 {
     padding: 30px;
     background-color: #1e1e1e;
     border-radius: 15px;
+    border: 1px solid #FF8C00; /* Highlight border */
+    box-shadow: 0 0 10px #FF8C00; /* Soft orange glow around container */
 }
+
 
 /* Form groups */
 .form-group {
@@ -65,8 +68,10 @@ header h1 {
 
 .form-group input:focus, .form-group select:focus {
     outline: none;
-    border: 1px solid #555; /* No highlight on focus */
+    border: 1px solid #FF8C00;
+    box-shadow: 0 0 5px #FF8C00;
 }
+
 
 /* Payment Details */
 .payment-details {
