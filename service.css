@@ -58,3 +58,16 @@ body {
   width: 180px;
   margin-bottom: 1em;
 }
+
+.card:hover {
+  border: 2px solid #fff;
+  transform: translateY(-5px);
+}
+
+.card {
+  background-color: #2e2b2b;
+  padding: 2em;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
