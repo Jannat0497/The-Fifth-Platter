@@ -53,3 +53,8 @@ body {
   font-size: 0.95em;
   line-height: 1.6;
 }
+
+.card img {
+  width: 180px;
+  margin-bottom: 1em;
+}
