@@ -7,17 +7,36 @@
 
 body {
     background-image: url(https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-e4c8-61f7-879f-b24a1119456a/raw?se=2025-04-27T09%3A38%3A55Z&sp=r&sv=2024-08-04&sr=b&scid=acecbb8a-12df-5e1b-9cb2-f3322254e4c4&skoid=0abefe37-d2bd-4fcb-bc88-32bccbef6f7d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-27T04%3A52%3A14Z&ske=2025-04-28T04%3A52%3A14Z&sks=b&skv=2024-08-04&sig=sUlclyp2jCX2dGHJkB4kC1l%2BY3l6V7plzIeNFF63e18%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Arial', sans-serif;
-    color: #e0e0e0; /* Light text */
+    color: #e0e0e0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+
 }
 
-/* Header styling */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: blur(5px);
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Light black overlay */
+}
+
+header, .payment-container {
+    position: relative;
+    z-index: 1;
+}
+
 header {
-    background-color: #1e1e1e;
-    color: #FF8C00; /* Dark Orange */
+    background-color: rgba(30, 30, 30, 0.85);
+    color: #FF8C00;
     text-align: center;
     padding: 25px 0;
     box-shadow: 0 4px 6px rgba(255, 140, 0, 0.4);
@@ -28,24 +47,15 @@ header h1 {
     letter-spacing: 2px;
 }
 
-/* Payment container */
 .payment-container {
-   
     max-width: 650px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #1e1e1e;
-    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
+    background-color: rgba(30, 30, 30, 0.85);
     border-radius: 15px;
-    animation: fadeIn 1s ease;
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Form groups */
 .form-group {
     margin-bottom: 20px;
 }
@@ -61,7 +71,7 @@ header h1 {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    background: #2c2c2c;
+    background: rgba(44, 44, 44, 0.9);
     color: #e0e0e0;
     border-radius: 8px;
     border: 1px solid #555;
@@ -69,31 +79,10 @@ header h1 {
 
 .form-group input:focus, .form-group select:focus {
     outline: none;
-    border-color: #FF8C00;
+    border: 1px solid #FF8C00;
+    box-shadow: 0 0 8px #FF8C00;
 }
 
-/* Order summary */
-.order-summary {
-    background: #2c2c2c;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-}
-
-.order-summary h3 {
-    color: #FF8C00;
-    margin-bottom: 10px;
-}
-
-.order-summary p {
-    margin-bottom: 8px;
-}
-
-.order-summary hr {
-    border: 1px solid #555;
-}
-
-/* Payment Details */
 .payment-details {
     margin-top: 15px;
     display: none;
@@ -101,30 +90,24 @@ header h1 {
     font-style: italic;
 }
 
-/* Terms checkbox */
-.form-group input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
-}
-
-/* Payment Button */
 .payment-btn {
     background-color: #FF8C00;
     color: #121212;
     padding: 15px;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bold;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .payment-btn:hover {
     background-color: #ffa733;
+    transform: scale(1.02);
 }
 
-/* Secure Payment section */
 .secure-payment {
     text-align: center;
     margin-top: 20px;
@@ -136,7 +119,6 @@ header h1 {
     color: #888;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .payment-container {
         margin: 20px;
