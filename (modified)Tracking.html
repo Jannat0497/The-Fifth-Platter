@@ -63,6 +63,7 @@
     }
 
     .track-form {
+      position: relative;
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
@@ -70,13 +71,29 @@
       border-radius: 16px;
       width: 100%;
       max-width: 420px;
-      box-shadow: 0 0 20px rgba(255, 69, 0, 0.25);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1;
+      overflow: hidden;
+      color: #fff;
     }
 
-    .track-form:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 30px rgba(255, 69, 0, 0.4);
+    .track-form::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, orangered, #ff9900, orangered);
+      background-size: 400% 400%;
+      z-index: -1;
+      border-radius: 20px;
+      animation: borderGlow 6s ease infinite;
+    }
+
+    @keyframes borderGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .track-form h2 {
@@ -161,3 +178,4 @@
 
 </body>
 </html>
+
