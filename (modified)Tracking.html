@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="https://cdn.icons.com/icons2/3590/PNG/512/burgers_cafe_food_restaurant_icon_226128.png" />
-  <style>
-    
+  <style> 
     * {
       box-sizing: border-box;
       margin: 0;
@@ -32,7 +31,7 @@
       width: 100vw;
       height: 100vh;
       background: url('https://img.freepik.com/free-photo/fast-food-black-slate-with-copy-space_23-2148273110.jpg') center/cover no-repeat;
-      filter:brightness(0.7);
+      filter: brightness(0.7);
       z-index: -1;
     }
 
@@ -64,13 +63,20 @@
     }
 
     .track-form {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       padding: 2rem;
       border-radius: 16px;
       width: 100%;
       max-width: 420px;
       box-shadow: 0 0 20px rgba(255, 69, 0, 0.25);
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .track-form:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(255, 69, 0, 0.4);
     }
 
     .track-form h2 {
