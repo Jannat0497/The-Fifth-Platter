@@ -85,6 +85,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
+  .login-button:hover {
+    background-color: #f06030;
+    box-shadow: 0 6px 12px rgba(255, 127, 80, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  .login-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
   .footer-text {
     margin-top: 30px;
     text-align: center;
