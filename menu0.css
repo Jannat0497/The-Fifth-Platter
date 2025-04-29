@@ -127,6 +127,18 @@
     padding-left: 10px;
     border-left: 4px solid #ff6f00;
   }
+
+  .scroll-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+  }
+  
   @media (max-width: 768px) {
     .menu-container {
       padding: 20px;
