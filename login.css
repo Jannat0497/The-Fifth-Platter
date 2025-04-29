@@ -4,17 +4,18 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
   }
-  
+
   body {
-    background-color: #222;
-    color: #fff;
+    background: url(https://img.freepik.com/premium-photo/plate-food-table-with-blurred-background_1304147-157373.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(8, 3, 3, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-size: 16px;
-    background: url(https://img.freepik.com/premium-photo/plate-food-table-with-blurred-background_1304147-157373.jpg);
-    background-size: cover;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
   }
   
   h1 {
@@ -23,7 +24,11 @@
     margin-bottom: 30px;
     font-weight: 600;
     white-space: nowrap;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 10px rgba(255, 127, 80, 0.7);
+    margin-bottom: 10px;
   }
+  
    .login-container {
     
     background: rgba(0, 0, 0, 0.7);
@@ -34,20 +39,6 @@
     transform: scale(0.98);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
    }
-  
-   .login-container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(255, 127, 80, 0.7);
-   }
-  
-   button:hover {
-    background-color: #e65c00;
-    box-shadow: 0 0 10px rgba(255, 111, 0, 0.5);
-    transform: translateY(-2px);
-  } 
-   button:active {
-    transform: translateY(2px);
-  }
   
   .input-group {
     width: 100%;
@@ -68,17 +59,6 @@
     color: #aaa;
   }
   
-  button {
-    width: 100%;
-    padding: 14px;
-    background-color: #ec8a40; /* Orange */
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
   .footer-text {
     margin-top: 20px;
     text-align: center;
@@ -87,6 +67,6 @@
   }
   
   .footer-text a {
-    color: #ff6f00; /* Orange */
+    color: #ff6f00; 
     
   }
