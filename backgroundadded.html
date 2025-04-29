@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up for The Fifth Platter</title>
+  <link href="backgroundadded.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+ </head>
+ <body class="dark-theme">
+ 
+
+  <header>
+  <h1>The Fifth Platter</h1>
+  <p class="tagline">Discover exclusive recipes and culinary insights.</p>
+  </header>
+ 
+
+  <div class="signup-container">
+  <form id="signupForm">
+  <div class="input-group">
+  <input type="text" id="fullName" placeholder=" " required />
+  <label for="fullName">Full Name</label>
+  <span class="error-message" id="fullNameError"></span>
+  </div>
+  <div class="input-group">
+  <input type="email" id="email" placeholder=" " required />
+  <label for="email">Email Address</label>
+  <span class="error-message" id="emailError"></span>
+  </div>
+  <div class="input-group">
+  <input type="password" id="password" placeholder=" " required />
+  <label for="password">Password</label>
+  <span class="error-message" id="passwordError"></span>
+  </div>
+  <button type="submit" class="signup-button">Join The Platter</button>
+  </form>
+  <p class="footer-text">Already a member? <a href="#">Log in</a></p>
+  </div>
+ 
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const signupForm = document.getElementById('signupForm');
+  const fullNameInput = document.getElementById('fullName');
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+  const fullNameError = document.getElementById('fullNameError');
+  const emailError = document.getElementById('emailError');
+  const passwordError = document.getElementById('passwordError');
+ 
+
+  signupForm.addEventListener('submit', (event) => {
+  let isValid = true;
+ 
+
+  // Basic client-side validation
+  if (fullNameInput.value.trim() === '') {
+  fullNameError.textContent = 'Please enter your full name.';
+  isValid = false;
+  } else {
+  fullNameError.textContent = '';
+  }
+ 
+
+  if (emailInput.value.trim() === '') {
+  emailError.textContent = 'Please enter your email address.';
+  isValid = false;
+  } else if (!isValidEmail(emailInput.value.trim())) {
+  emailError.textContent = 'Please enter a valid email address.';
+  isValid = false;
+  } else {
+  emailError.textContent = '';
+  }
+ 
+
+  if (passwordInput.value.trim() === '') {
+  passwordError.textContent = 'Please enter a password.';
+  isValid = false;
+  } else if (passwordInput.value.length < 6) {
+  passwordError.textContent = 'Password must be at least 6 characters long.';
+  isValid = false;
+  } else {
+  passwordError.textContent = '';
+  }
+ 
+
+  if (!isValid) {
+  event.preventDefault(); // Prevent form submission if validation fails
+  } else {
+  // In a real scenario, you would send the form data to a server here
+  console.log('Form submitted successfully!');
+  alert('Welcome to The Fifth Platter! (This is a demo)');
+  signupForm.reset(); // Clear the form
+  }
+  });
+ 
+
+  function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+  }
+  });
+  </script>
+ 
+
+ </body>
+ </html>
