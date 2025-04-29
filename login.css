@@ -22,16 +22,23 @@
     font-weight: 600;
     white-space: nowrap;
   }
+   .login-container {
+    
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.5);
+    width: 400px;
+    transform: scale(0.98);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   }
   
-  .login-container {
-    background-color: #070606;
-    padding: 40px 30px;
-    border-radius: 12px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+   .login-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 127, 80, 0.7);
+   }
+  
+  
   
   .input-group {
     width: 100%;
