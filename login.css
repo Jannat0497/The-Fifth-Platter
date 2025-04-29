@@ -13,6 +13,8 @@
     align-items: center;
     height: 100vh;
     font-size: 16px;
+    background: url(https://img.freepik.com/premium-photo/plate-food-table-with-blurred-background_1304147-157373.jpg);
+    background-size: cover;
   }
   
   h1 {
@@ -22,15 +24,29 @@
     font-weight: 600;
     white-space: nowrap;
   }
+   .login-container {
+    
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.5);
+    width: 400px;
+    transform: scale(0.98);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   }
   
-  .login-container {
-    background-color: #070606;
-    padding: 40px 30px;
-    border-radius: 12px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   .login-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 127, 80, 0.7);
+   }
+  
+   button:hover {
+    background-color: #e65c00;
+    box-shadow: 0 0 10px rgba(255, 111, 0, 0.5);
+    transform: translateY(-2px);
+  } 
+   button:active {
+    transform: translateY(2px);
   }
   
   .input-group {
