@@ -13,6 +13,8 @@
     align-items: center;
     height: 100vh;
     font-size: 16px;
+    background: url(https://img.freepik.com/premium-photo/plate-food-table-with-blurred-background_1304147-157373.jpg);
+    background-size: cover;
   }
   
   h1 {
