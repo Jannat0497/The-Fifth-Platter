@@ -71,8 +71,15 @@ body {
 .right_box img {
   width: 100%;
   max-width: 400px;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
+.right_box img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Responsive */
 @media only screen and (max-width: 850px) {
   .contact_box {
     grid-template-columns: 1fr;
