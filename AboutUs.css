@@ -80,10 +80,27 @@ body {
   background: #ffeedc;
   box-shadow: rgba(0, 0, 0, 2.24) 0 3px 8px;
   border: 5px solid chocolate;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.box1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .box1 img {
   width: 100%;
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-bottom-color 0.4s ease;
+  border-bottom: 3px solid chocolate;
+}
+
+.box1 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  border-bottom-color: orangered;
 }
 
 .box1_text {
