@@ -14,7 +14,8 @@
   .menu-container {
     max-width: 1200px;
     margin: auto;
-    background: #1d1d1d;
+    background: #403f3f;
+    
     padding: 40px;
     border-radius: 12px;
   }
