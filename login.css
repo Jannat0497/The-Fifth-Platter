@@ -86,13 +86,21 @@
   }
   
   .footer-text {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #aaa;
   }
   
   .footer-text a {
-    color: #ede7e1; 
-    
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
   }
+  
+  .footer-text a:hover {
+    color: #f06030;
+    text-decoration: underline;
+  }
+  
