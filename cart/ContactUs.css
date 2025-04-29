@@ -79,6 +79,19 @@ body::before {
   padding-right: 2em;
 }
 
+.left_box img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.left_box img:hover {
+  transform: scale(1.07);
+  filter: brightness(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
 .right_box {
   text-align: right;
 }
@@ -86,12 +99,14 @@ body::before {
 .right_box img {
   width: 100%;
   max-width: 400px;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
 }
 
 .right_box img:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
   filter: brightness(1.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 @media only screen and (max-width: 850px) {
@@ -102,5 +117,9 @@ body::before {
 
   .right_box {
     text-align: center;
+  }
+
+  .left_box {
+    padding: 0;
   }
 }
