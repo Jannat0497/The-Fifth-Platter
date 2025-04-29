@@ -13,7 +13,6 @@
 
     <div class="payment-container">
         <form id="payment-form">
-            <!-- Only Payment Options -->
             <div class="form-group">
                 <label for="payment-method">Select Payment Method</label>
                 <select id="payment-method" name="payment-method" required>
@@ -25,7 +24,6 @@
                 </select>
             </div>
 
-            <!-- Payment Details -->
             <div id="paytm-details" class="payment-details">
                 <p>You'll be redirected to Paytm to complete the payment.</p>
             </div>
@@ -42,15 +40,15 @@
                 <p>You'll pay in cash upon delivery.</p>
             </div>
 
-            <!-- Payment Button -->
             <button type="submit" class="payment-btn">Pay Now</button>
 
-            <!-- Secure Payment Note -->
-            <div class="secure-payment">
-                <img src="lock-icon.png" alt="Secure Payment" style="width:30px;height:30px;margin-top:15px;">
-                <p>Secure & Encrypted Payment</p>
+            <div id="loader" style="display:none; text-align:center; margin-top:20px;">
+                <img src="loader.gif" alt="Loading..." width="50">
             </div>
 
+            <div class="secure-payment">
+                <p>Secure & Encrypted Payment</p>
+            </div>
         </form>
     </div>
 
@@ -85,20 +83,11 @@
         document.getElementById('payment-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const selectedMethod = paymentMethod.value;
-            const orderId = generateOrderId();
+            document.getElementById('loader').style.display = 'block';
 
-            if (selectedMethod === 'paytm') {
-                alert(`Order ID: ${orderId}\nYou will be redirected to Paytm.`);
-            } else if (selectedMethod === 'phonepe') {
-                alert(`Order ID: ${orderId}\nYou will be redirected to PhonePe.`);
-            } else if (selectedMethod === 'gpay') {
-                alert(`Order ID: ${orderId}\nYou will be redirected to Google Pay.`);
-            } else if (selectedMethod === 'cod') {
-                alert(`Order ID: ${orderId}\nCash on Delivery selected.`);
-            }
-
-            window.location.href = "trackorder.html";
+            setTimeout(() => {
+                window.location.href = "trackorder.html";
+            }, 2000);
         });
     </script>
 </body>
