@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - The Fifth Platter</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <h1>The Fifth Platter</h1>
+    </header>
+
+    <div class="payment-container">
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="payment-method">Select Payment Method</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="paytm">Paytm</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="gpay">Google Pay</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+
+            <div id="paytm-details" class="payment-details">
+                <p>You'll be redirected to Paytm to complete the payment.</p>
+            </div>
+
+            <div id="phonepe-details" class="payment-details">
+                <p>You'll be redirected to PhonePe to complete the payment.</p>
+            </div>
+
+            <div id="gpay-details" class="payment-details">
+                <p>You'll be redirected to Google Pay to complete the payment.</p>
+            </div>
+
+            <div id="cod-details" class="payment-details">
+                <p>You'll pay in cash upon delivery.</p>
+            </div>
+
+            <button type="submit" class="payment-btn">Pay Now</button>
+
+            <div id="loader" style="display:none; text-align:center; margin-top:20px;">
+                <img src="loader.gif" alt="Loading..." width="50">
+            </div>
+
+            <div class="secure-payment">
+                <p>Secure & Encrypted Payment</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const paymentMethod = document.getElementById('payment-method');
+        const paytmDetails = document.getElementById('paytm-details');
+        const phonepeDetails = document.getElementById('phonepe-details');
+        const gpayDetails = document.getElementById('gpay-details');
+        const codDetails = document.getElementById('cod-details');
+
+        paymentMethod.addEventListener('change', function () {
+            paytmDetails.style.display = 'none';
+            phonepeDetails.style.display = 'none';
+            gpayDetails.style.display = 'none';
+            codDetails.style.display = 'none';
+
+            if (paymentMethod.value === 'paytm') {
+                paytmDetails.style.display = 'block';
+            } else if (paymentMethod.value === 'phonepe') {
+                phonepeDetails.style.display = 'block';
+            } else if (paymentMethod.value === 'gpay') {
+                gpayDetails.style.display = 'block';
+            } else if (paymentMethod.value === 'cod') {
+                codDetails.style.display = 'block';
+            }
+        });
+
+        function generateOrderId() {
+            return 'ORD' + Math.floor(Math.random() * 1000000);
+        }
+
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            document.getElementById('loader').style.display = 'block';
+
+            setTimeout(() => {
+                window.location.href = "trackorder.html";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+
+
