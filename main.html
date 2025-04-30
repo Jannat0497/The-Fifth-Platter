@@ -10,8 +10,12 @@
 </head>
 <body>
   <header>
+    
     <nav class="navbar">
       <div class="navbar-container">
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="ri-menu-line"></i>
+        </div>          
       <div class="logo"><img src="./img/main_image.png" alt="logo" /></div>
         <ul class="nav_links">
           <li><a href="main.html">Home</a></li>
@@ -33,3 +37,9 @@
   </header>
 </body>
 </html>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav_links').classList.toggle('active');
+    document.querySelector('.nav_buttons').classList.toggle('active');
+  }
+</script>
