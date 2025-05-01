@@ -22,7 +22,6 @@
     <!-- Dessert Section -->
     <section id="desserts">
       <h3 class="category-title">Desserts</h3>
-      <!-- <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;"> -->   
         <div class="slider">
         <div class="menu-card">
           <div class="item-text">
@@ -37,7 +36,7 @@
             <img src="img/ice cream.jpg" alt="ice cream">
             <h4>Ice Cream Sundae</h4>
             <p>Vanilla with chocolate syrup</p>
-            <span>₹120</span>
+            <span>₹180</span>
           </div>
         </div>
         <div class="menu-card">
@@ -45,7 +44,7 @@
             <img src="img/chocolate cake.png" alt="chocolate cake">
             <h4>Chocolate Cake</h4>
             <p>Rich and moist chocolate cake</p>
-            <span>₹200</span>
+            <span>₹600</span>
           </div>
         </div>
         <div class="menu-card">
@@ -53,7 +52,7 @@
             <img src="img/Tiramisu.png" alt="Tiramisu">
             <h4>Tiramisu</h4>
             <p>Classic Italian dessert with coffee</p>
-            <span>₹250</span>
+            <span>₹350</span>
           </div>
         </div>
         <div class="menu-card">
@@ -61,18 +60,17 @@
             <img src="img/custard.png" alt="fruit custard">
             <h4>Fruit Custard</h4>
             <p>Fresh fruits with custard cream</p>
-            <span>₹180</span>
+            <span>₹210</span>
           </div>
         </div>
       </div>
-      </marquee>
     </section>
 
 
     <!-- Beverages -->
     <section id="beverages">
       <h3 class="category-title">Beverages</h3>
-      <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;">
+      <!-- <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;"> -->
       <div class="slider">
         <div class="menu-card">
           <div class="item-text">
@@ -115,13 +113,12 @@
           </div>
         </div>
       </div>
-      </marquee>
     </section>
 
     <!-- Pizza -->
     <section id="pizzas">
       <h3 class="category-title">Pizza</h3>
-      <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;">
+      <!-- <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;"> -->
       <div class="slider">
         <div class="menu-card">
           <div class="item-text">
@@ -164,13 +161,12 @@
           </div>
         </div>
       </div>
-    </marquee>
     </section>
 
     <!-- Burgers -->
     <section id="burgers">
       <h3 class="category-title">Burgers</h3>
-      <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;"></marquee>
+      <!-- <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;"></marquee> -->
       <div class="slider">
         <div class="menu-card">
           <div class="item-text">
@@ -213,13 +209,13 @@
           </div>
         </div>
       </div>
-    </marquee>
+
     </section>
 
     <!-- North Indian -->
     <section id="North-indian">
       <h3 class="category-title">North Indian</h3>
-      <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;"></marquee>
+      <!-- <marquee behavior="scroll" direction="scroll" scrollamount="" style="color: #ff6f00; font-size: 1.2rem; margin-bottom: 10px;"></marquee> -->
       <div class="slider">
         <div class="menu-card">
           <div class="item-text">
@@ -262,9 +258,28 @@
           </div>
         </div>
       </div>
-    </marquee>
     </section>
     
   </div>
 </body>
 </html>
+<script>
+document.querySelectorAll('.slider').forEach(slider => {
+  let scrollAmount = 0;
+  const scrollStep = 260;
+
+  setInterval(() => {
+    // If at the end, reset to 0
+    if (scrollAmount + slider.clientWidth >= slider.scrollWidth) {
+      scrollAmount = 0;
+    } else {
+      scrollAmount += scrollStep;
+    }
+
+    slider.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }, 4000);
+});
+</script>
