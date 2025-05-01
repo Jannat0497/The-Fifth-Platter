@@ -34,7 +34,7 @@
   
   .heading1 {
     font-size: 1.8rem;
-    color: #f5c518;
+    color: #ff9100;
     margin-bottom: 1rem;
     letter-spacing: 2px;
     animation: fadeIn 1s ease-in-out;
@@ -76,7 +76,7 @@
   .card_title {
     font-size: 1.5rem;
     margin: 1rem 0;
-    color: #f5c518;
+    color: #ff9100;
   }
   
   .card p {
@@ -105,7 +105,7 @@
   }
   
   .footer_content strong {
-    color: #f5c518;
+    color: #ff9100;
   }
   
   /* Animations */
@@ -147,7 +147,7 @@ body {
 
 .heading1 {
   font-size: 1.8rem;
-  color: #f5c518;
+  color: #ff9100;
   margin-bottom: 1rem;
   letter-spacing: 2px;
   animation: fadeIn 1s ease-in-out;
@@ -187,7 +187,7 @@ body {
 .card_title {
   font-size: 1.5rem;
   margin: 1rem 0;
-  color: #f5c518;
+  color: #ff9100;
 }
 
 .card p {
@@ -198,8 +198,8 @@ body {
 .card:hover {
   transform: translateY(-12px) scale(1.03);
   background-color: #222;
-  border-color: orange;
-  box-shadow: 0 0 20px orange;
+  border-color: #ff9100(255, 170, 0);
+  box-shadow: 0 0 20px #ff9100;
 }
 
 footer {
@@ -214,7 +214,7 @@ footer {
 }
 
 .footer_content strong {
-  color: #f5c518;
+  color: #ff9100;
 }
 
 @keyframes fadeIn {
