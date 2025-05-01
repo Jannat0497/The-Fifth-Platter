@@ -11,15 +11,43 @@
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  padding: 1.5rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  z-index: 1;
-  transition: all 0.3s ease;
+  padding: 0.6rem 1.5rem; /* Reduced padding */
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
+
+.logo img {
+  width: 120px; /* Reduced logo size */
+  height: auto;
+}
+
+.nav_links a {
+  font-size: 16px; /* Slightly smaller nav link text */
+}
+
+.btn {
+  padding: 6px 12px; /* Smaller buttons */
+  font-size: 14px;
+}
+
+
+.contact {
+  margin-top: 100px; /* Push content below navbar (adjust based on navbar height) */
+  width: 100%;
+  padding: 4em 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.contact {
+  border-radius: 12px;
+  backdrop-filter: blur(3px); /* Optional: glass-like effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 
 .navbar-container {
   display: flex;
@@ -101,6 +129,14 @@ body::before {
   background: orangered;
   border: 2px solid orangered;
   transition: 0.5s ease-out;
+}
+
+.contact {
+  margin-top: 80px; /* Previously 100px or 6% — now tighter */
+}
+
+body {
+  padding-top: 80px; /* Always reserve space for navbar */
 }
 
 .btn1 {
