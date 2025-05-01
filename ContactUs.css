@@ -8,6 +8,71 @@
   color: #fff;
   font-family: 'Lato', sans-serif;
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 160px;
+  height: auto;
+}
+
+.nav_links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav_links a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav_links a:hover {
+  color: orangered;
+}
+
+.nav_buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn {
+  background: orangered;
+  border: 2px solid orangered;
+  padding: 8px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: orangered;
+}
 
 body {
   background: url('https://c8.alamy.com/comp/W50GE1/different-tasty-food-from-delivery-service-on-wooden-background-W50GE1.jpg') no-repeat center center/cover;
