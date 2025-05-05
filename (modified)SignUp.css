@@ -16,9 +16,7 @@
     font-size: 18px;
     
   }
-  
-
-  
+ 
   h1 {
     font-size: 3rem;
     color: #ff6f00; /* Orange */
@@ -135,7 +133,7 @@
   .footer-text a:hover {
     color: #e65c00;
   }
-  
+ 
   @media (max-width: 600px) {
     .signup-container {
       width: 90%;

@@ -1,0 +1,31 @@
+project:
+  name: "The Fifth Platter (Food Ordering Site)"
+  description: "Fifth Platter: SCM Excellence Delight A curated selection symbolizing the harmony and precision of top-tier Supply Chain Management—each item on this platter reflects efficiency, coordination, and seamless flow, just like a perfectly optimized supply chain. Ideal for showcasing operational excellence on your menu or event"
+  technologies:
+    - HTML
+    - CSS
+    - JavaScript
+    - GitHub Pages
+  features:
+    - Symbolic and thematic representation
+    - Easy-to-navigate interface
+    - Visually engaging layout
+    - Hosted on GitHub Pages
+  usage:
+    instructions:
+      - Clone the repository from GitHub
+      - Open index.html in your browser
+      - Explore the curated SCM-themed components
+  authors:
+    - name: "Jannat"
+      role: "Project Manager"
+    - name: "Kamya Sharma"
+      role: "HTML and CSS Developer"
+    - name: "Mehak"
+      role: "HTML and CSS Developer"
+    - name: "Mayank Kakkar"
+      role: "Tester"
+    - name: "Priyanshu Sharma"
+      role: "UI Helper"
+  repository: "https://github.com/Jannat0497/The-Fifth-Platter"
+  license: "MIT"

@@ -51,37 +51,49 @@ header::before {
   z-index: 1;
   transition: all 0.3s ease;
 }
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .logo img {
   width: 160px;
   height: auto;
 }
 
-
-.nav_items {
+/* Centered links in the middle */
+.nav_links {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.item {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav_items li {
+  gap: 2rem;
   list-style: none;
+  justify-content: center;
+  flex: 1;
 }
 
-.nav_items a {
+.nav_links a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
-.nav_items a:hover {
+
+.nav_links a:hover {
   color: orangered;
 }
+
+.nav_buttons {
+  display: flex;
+  gap: 1rem;
+  /* flex:1;
+  display:flex; */
+  justify-content: flex-end;
+
+}
+
 .btn {
   background: orangered;
   border: 2px solid orangered;
@@ -89,10 +101,11 @@ header::before {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
-}
+} 
 
 .btn:hover {
   background: transparent;
+  color:orangered;
 }
 
 
@@ -117,4 +130,65 @@ header::before {
   text-align: left;
   margin: 1rem 0;
   padding: 1% 0;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: orangered;
+}
+
+/* Small screen behavior */
+@media (max-width: 448px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav_links,
+  .nav_buttons {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav_links.active,
+  .nav_buttons.active {
+    display: flex;
+  }
+
+  .nav_links a {
+    font-size: 18px;
+    padding: 0.5rem 0;
+  }
+
+  .nav_buttons a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav_buttons {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }
