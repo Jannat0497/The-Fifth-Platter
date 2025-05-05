@@ -141,8 +141,7 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    }
-
-   
+  
    .signup-button:hover {
     background-color: #f06030; /* Darker Coral */
     box-shadow: 0 6px 12px rgba(255, 127, 80, 0.5);
