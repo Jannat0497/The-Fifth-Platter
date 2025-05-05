@@ -244,7 +244,7 @@
     animation: scroll-left 20s linear infinite;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 580px) {
     .menu-container {
       padding: 20px;
     }
@@ -257,3 +257,44 @@
       min-width: 200px;
     }
   }  
+  @media (max-width: 580px) {
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu-section h2 {
+      font-size: 24px;
+    }
+  
+    .menu-card {
+      min-width: 200px;
+      padding: 10px;
+    }
+  
+    .slider {
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-card {
+      min-width: 160px;
+      padding: 8px;
+    }
+  
+    .menu-card h3 {
+      font-size: 14px;
+    }
+  
+    .menu-card p, .menu-card .price {
+      font-size: 12px;
+    }
+  
+    .menu-card button {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
