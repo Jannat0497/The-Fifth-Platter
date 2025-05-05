@@ -1,53 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
+/* Reset & Base */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #fff;
+  box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
-.navbar {
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url('https://c8.alamy.com/comp/W50GE1/different-tasty-food-from-delivery-service-on-wooden-background-W50GE1.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+  padding-top: 100px; /* space for navbar */
+}
+
+body::before {
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.6rem 1.5rem; /* Reduced padding */
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.logo img {
-  width: 120px; /* Reduced logo size */
-  height: auto;
-}
-
-.nav_links a {
-  font-size: 16px; /* Slightly smaller nav link text */
-}
-
-.btn {
-  padding: 6px 12px; /* Smaller buttons */
-  font-size: 14px;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.7);
+  z-index: -1;
 }
 
 
-.contact {
-  margin-top: 100px; /* Push content below navbar (adjust based on navbar height) */
+
+.navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
-  padding: 4em 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  padding: 1 rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 1;
+  transition: all 0.3s ease;
+  background-color: #000;
 }
-
-.contact {
-  border-radius: 12px;
-  backdrop-filter: blur(3px); /* Optional: glass-like effect */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 
 .navbar-container {
   display: flex;
@@ -97,47 +95,6 @@
   transition: background 0.3s ease;
 }
 
-.btn:hover {
-  background: transparent;
-  color: orangered;
-}
-
-body {
-  background: url('https://c8.alamy.com/comp/W50GE1/different-tasty-food-from-delivery-service-on-wooden-background-W50GE1.jpg') no-repeat center center/cover;
-  position: relative;
-  z-index: 1;
-  background-attachment: fixed; /* Parallax effect */
-  transition: background-position 0.5s ease-out;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(10, 10, 10, 0.7); /* dark transparent overlay */
-  z-index: -1;
-}
-
-.btn {
-  padding: 9px 15px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  background: orangered;
-  border: 2px solid orangered;
-  transition: 0.5s ease-out;
-}
-
-.contact {
-  margin-top: 80px; /* Previously 100px or 6% — now tighter */
-}
-
-body {
-  padding-top: 80px; /* Always reserve space for navbar */
-}
 
 .btn1 {
   padding: 9px 15px;
@@ -147,43 +104,73 @@ body {
   background: orangered;
   border: 2px solid orangered;
   transition: 0.4s ease;
+  position:;
   border-radius: 5px;
   box-shadow: 0 0 0 transparent;
 }
-
-.btn1:hover {
+.btn:hover {
   background: transparent;
-  color: #fff;
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255, 69, 0, 0.6); /* glowing orange effect */
-}
-
-.heading {
-  font-size: 2.5em;
-  padding: 0.5em 0;
-  line-height: 1.3;
-  text-align: center;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.heading:hover {
   color: orangered;
-  transform: translateY(-5px);
+}
+
+
+.btn:hover {
+  background: transparent;
+  color: orangered;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+  margin-top: 9rem;
+  padding: 4rem 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height:100%;
+}
+
+.contact_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.left_box {
+  padding: 0 2rem;
+}
+
+.right_box {
+  text-align: center;
 }
 
 .heading_1 {
-  font-size: 1.5em;
   color: orangered;
+  font-size: 1.5rem;
   text-align: center;
 }
 
+.heading {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  transition: 0.3s ease;
+  color: orangered;
+}
+
+
 .para1 {
   color: #ccc;
-  padding: 1em 0;
-  line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
   text-align: center;
-  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 1rem 0;
+  transition: 0.3s ease;
 }
 
 .para1:hover {
@@ -191,68 +178,52 @@ body {
   transform: translateY(-3px);
 }
 
-.contact {
-  margin-top: 6%;
-  width: 100%;
-  padding: 4em 0;
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent section */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-.contact_box {
-  display: grid;
-  width: 85%;
-  margin: auto;
-  align-items: center;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-}
-
-.left_box {
-  padding-right: 2em;
-}
-
-.left_box img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
-}
-
-.left_box img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-.right_box {
-  text-align: right;
-}
-
 .right_box img {
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
-  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .right_box img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-@media only screen and (max-width: 850px) {
+/* Responsive */
+@media (max-width: 850px) {
   .contact_box {
     grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .right_box {
     text-align: center;
   }
 
   .left_box {
     padding: 0;
   }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav_buttons {
+    margin-top: 1rem;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
 }
